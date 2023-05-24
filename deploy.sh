@@ -12,3 +12,4 @@ kubectl apply -f namespace.yml
 kubectl apply -f storage-class.yml
 
 /bin/bash ./redis$CLUSTERED_SUFIX/deploy.sh
+/bin/bash ./influxdb/deploy.sh
