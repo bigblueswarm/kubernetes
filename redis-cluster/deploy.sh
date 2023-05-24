@@ -6,7 +6,7 @@ STEPS=4
 FOLDER=$( dirname -- "${BASH_SOURCE[0]}" )
 
 echo "[redis] [1/${STEPS}] Creating PersistentVolume"
-kubectl apply -f $FOLDER/persistent-volume.yml
+kubectl apply -n bigblueswarm -f $FOLDER/persistent-volume.yml
 
 echo "[redis] [2/${STEPS}] Creating ConfigMap"
 kubectl apply -n bigblueswarm -f $FOLDER/config-map.yml

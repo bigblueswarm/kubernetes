@@ -8,7 +8,7 @@ STEPS=5
 FOLDER=$( dirname -- "${BASH_SOURCE[0]}" )
 
 echo "[influxdb] [1/${STEPS}] Creating PersistentVolume"
-kubectl apply -f $FOLDER/persistent-volume.yml
+kubectl apply -n bigblueswarm -f $FOLDER/persistent-volume.yml
 
 echo "[influxdb] [2/${STEPS}] Creating Secret"
 kubectl apply -n bigblueswarm -f $FOLDER/secret.yml
