@@ -42,6 +42,14 @@ spec:
             initialDelaySeconds: 20
             timeoutSeconds: 5
             periodSeconds: 3
+          startupProbe:
+            exec:
+              command:
+                - redis-cli
+                - ping
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 1
       volumes:
         - name: redis-config
           configMap:
