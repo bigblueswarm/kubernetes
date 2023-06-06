@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bigblueswarm-ingress
+  namespace: bigblueswarm
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /bigbluebutton
+            pathType: Prefix
+            backend:
+              service:
+                name: bigblueswarm
+                port:
+                  number: 8090
+          - path: /admin
+            pathType: Prefix
+            backend:
+              service:
+                name: bigblueswarm
+                port:
+                  number: 8090
