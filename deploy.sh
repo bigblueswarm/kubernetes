@@ -13,3 +13,4 @@ kubectl apply -f storage-class.yml
 
 /bin/bash ./redis$CLUSTERED_SUFIX/deploy.sh
 /bin/bash ./influxdb/deploy.sh
+/bin/bash ./bigblueswarm/deploy.sh
