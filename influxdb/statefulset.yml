@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: influxdb
+  namespace: bigblueswarm
 spec:
   serviceName: influxdb
   replicas: 1

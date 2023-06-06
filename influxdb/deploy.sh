@@ -8,16 +8,16 @@ STEPS=5
 FOLDER=$( dirname -- "${BASH_SOURCE[0]}" )
 
 echo "[influxdb] [1/${STEPS}] Creating PersistentVolume"
-kubectl apply -n bigblueswarm -f $FOLDER/persistent-volume.yml
+kubectl apply -f $FOLDER/persistent-volume.yml
 
 echo "[influxdb] [2/${STEPS}] Creating Secret"
-kubectl apply -n bigblueswarm -f $FOLDER/secret.yml
+kubectl apply -f $FOLDER/secret.yml
 
 echo "[influxdb] [2/${STEPS}] Creating ConfigMap"
-kubectl apply -n bigblueswarm -f $FOLDER/config-map.yml
+kubectl apply -f $FOLDER/config-map.yml
 
 echo "[influxdb] [3/${STEPS}] Creating Statefulset"
-kubectl apply -n bigblueswarm -f $FOLDER/statefulset.yml
+kubectl apply -f $FOLDER/statefulset.yml
 
 echo "[influxdb] [4/${STEPS}] Creating Service"
-kubectl apply -n bigblueswarm -f $FOLDER/service.yml
+kubectl apply -f $FOLDER/service.yml
