@@ -8,6 +8,8 @@ FOLDER=$( dirname -- "${BASH_SOURCE[0]}" )
 echo "[redis] [1/${STEPS}] Creating PersistentVolume"
 kubectl apply -f $FOLDER/persistent-volume.yml
 
+sleep 5s
+
 echo "[redis] [2/${STEPS}] Creating ConfigMap"
 kubectl apply -f $FOLDER/config-map.yml
 

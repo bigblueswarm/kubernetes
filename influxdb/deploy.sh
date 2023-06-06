@@ -10,6 +10,8 @@ FOLDER=$( dirname -- "${BASH_SOURCE[0]}" )
 echo "[influxdb] [1/${STEPS}] Creating PersistentVolume"
 kubectl apply -f $FOLDER/persistent-volume.yml
 
+sleep 5s
+
 echo "[influxdb] [2/${STEPS}] Creating Secret"
 kubectl apply -f $FOLDER/secret.yml
 

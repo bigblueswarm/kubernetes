@@ -18,11 +18,11 @@ data:
       apiKey: kgpqrTipM2yjcXwz5pOxBKViE9oNX76R
     port: 8090
     redis:
-      address: localhost:6379
+      address: redis:6379
       password:
       database: 0
     influxdb:
-      address: http://localhost:8086
+      address: http://influxdb:8086
       token: Zq9wLsmhnW5UtOiPJApUv1cTVJfwXsTgl_pCkiTikQ3g2YGPtS5HqsXef-Wf5pUU3wjY3nVWTYRI-Wc8LjbDfg==
       organization: bigblueswarm
       bucket: bucket
